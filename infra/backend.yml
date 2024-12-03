@@ -1,0 +1,137 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: container on ecs cluster
+
+Parameters:
+
+  Prefix:
+    Type: String
+    Default: 'mmp'
+  
+  ClusterName:
+    Type: String
+    Default: 'mmpcluster'
+
+  SSLArn:
+    Type: String
+    Default: 'arn:aws:acm:ap-south-1:721772295061:certificate/75217aec-283a-49b7-9fe1-ad9bcef2e493'
+ 
+    
+Resources:
+  
+  Task:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: mmp-backend
+      Cpu: 1024
+      Memory: 2048
+      NetworkMode: awsvpc
+      RequiresCompatibilities:
+        - FARGATE
+      ExecutionRoleArn: !ImportValue mmp-ECSTaskExecutionRole
+      TaskRoleArn: !ImportValue mmp-AmazonECSTASKRole
+      ContainerDefinitions:
+        - Name: mmpbackend
+          Image: 721772295061.dkr.ecr.ap-south-1.amazonaws.com/mmpbackend:1dbb45c
+          Cpu: 1024
+          Memory: 2048
+          PortMappings:
+            - ContainerPort: 8000
+              Protocol: tcp
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref ClusterName
+              awslogs-region: !Ref AWS::Region
+              awslogs-stream-prefix: 'backend'
+
+  Service:
+    Type: AWS::ECS::Service
+    DependsOn: ListenerRule
+    Properties:
+      ServiceName: mmp-backend-service
+      TaskDefinition: !Ref Task
+      Cluster: !ImportValue 'mmp-ECSCluster'
+      LaunchType: FARGATE
+      DesiredCount: 1
+      DeploymentConfiguration:
+        MaximumPercent: 200
+        MinimumHealthyPercent: 70
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: ENABLED
+          Subnets:
+            - !ImportValue mmp-Subnet1
+            - !ImportValue mmp-Subnet2
+          SecurityGroups:
+            - !ImportValue mmp-ContainerSecurityGroup
+      LoadBalancers:
+        - ContainerName: mmpbackend
+          ContainerPort: 8000
+          TargetGroupArn: !Ref TargetGroup
+
+  TargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Name: mmp-backend-tg
+      VpcId: !ImportValue mmp-vpc
+      Port: 80
+      Protocol: HTTP
+      Matcher:
+        HttpCode: 200-299
+      HealthCheckIntervalSeconds: 10
+      HealthCheckPath: /
+      HealthCheckProtocol: HTTP
+      HealthCheckTimeoutSeconds: 5
+      HealthyThresholdCount: 10
+      TargetType: ip
+
+  LoadBalancerListenerHttps:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    DependsOn:
+      - TargetGroup
+    Properties:
+      LoadBalancerArn: !ImportValue mmp-LoadBalancer
+      Port: 443
+      Protocol: 'HTTPS'
+      Certificates:
+        - CertificateArn: !Ref SSLArn
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref TargetGroup
+
+  ListenerRule:
+    Type: AWS::ElasticLoadBalancingV2::ListenerRule
+    Properties:
+      ListenerArn: !Ref LoadBalancerListenerHttps
+      Priority: 2
+      Conditions:
+        - Field: host-header
+          Values:
+            - 'mmp.aptence.com'
+      Actions:
+        - TargetGroupArn: !Ref TargetGroup
+          Type: forward
+
+  ScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    DependsOn: Service
+    Properties:
+      RoleARN: !ImportValue mmp-AmazonECSAutoScalingRole
+      ResourceId: !Join
+        - "/"
+        - [service, !ImportValue mmp-ECSCluster, !GetAtt [Service, Name]]
+      ServiceNamespace: ecs
+      ScalableDimension: ecs:service:DesiredCount
+      MinCapacity: 1
+      MaxCapacity: 5
+
+  ScalingPolicy:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: "AmazonECSTaskExecutionRolePolicy"
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId: !Ref ScalableTarget
+      TargetTrackingScalingPolicyConfiguration:
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ECSServiceAverageCPUUtilization
+        TargetValue: 5.0

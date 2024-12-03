@@ -1,0 +1,66 @@
+[
+{
+    "model": "courses.substd",
+    "pk": 1,
+    "fields": {
+        "subject": 1,
+        "standard": 1
+    }
+},
+{
+    "model": "courses.substd",
+    "pk": 2,
+    "fields": {
+        "subject": 1,
+        "standard": 2
+    }
+},
+{
+    "model": "courses.substd",
+    "pk": 3,
+    "fields": {
+        "subject": 2,
+        "standard": 1
+    }
+},
+{
+    "model": "courses.substd",
+    "pk": 4,
+    "fields": {
+        "subject": 2,
+        "standard": 2
+    }
+},
+{
+    "model": "courses.substd",
+    "pk": 5,
+    "fields": {
+        "subject": 3,
+        "standard": 1
+    }
+},
+{
+    "model": "courses.substd",
+    "pk": 6,
+    "fields": {
+        "subject": 3,
+        "standard": 2
+    }
+},
+{
+    "model": "courses.substd",
+    "pk": 7,
+    "fields": {
+        "subject": 4,
+        "standard": 1
+    }
+},
+{
+    "model": "courses.substd",
+    "pk": 8,
+    "fields": {
+        "subject": 4,
+        "standard": 2
+    }
+}
+]

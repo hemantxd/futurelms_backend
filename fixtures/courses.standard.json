@@ -1,0 +1,16 @@
+[
+{
+    "model": "courses.standard",
+    "pk": 1,
+    "fields": {
+        "title": "11"
+    }
+},
+{
+    "model": "courses.standard",
+    "pk": 2,
+    "fields": {
+        "title": "12"
+    }
+}
+]

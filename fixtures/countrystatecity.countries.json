@@ -1,0 +1,11 @@
+[
+{
+    "model": "countrystatecity.countries",
+    "pk": 1,
+    "fields": {
+        "sortname": "IND",
+        "name": "India",
+        "phonecode": "91"
+    }
+}
+]

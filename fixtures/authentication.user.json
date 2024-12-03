@@ -1,0 +1,38 @@
+[
+{
+    "model": "authentication.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$tMcJe2yfxsD4$MIrGXWdCb8vXNdC1mFghB4xcUb3UswqTPoTS1I16+X4=",
+        "last_login": "2019-04-16T10:05:53.874Z",
+        "is_superuser": true,
+        "created_at": "2019-04-16T09:20:00.580Z",
+        "updated_at": "2019-04-16T09:20:00.680Z",
+        "username": "prabhatiitbhu@gmail.com",
+        "email": "prabhatiitbhu@gmail.com",
+        "is_active": true,
+        "is_staff": true,
+        "phonenumber": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "authentication.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$tMcJe2yfxsD4$MIrGXWdCb8vXNdC1mFghB4xcUb3UswqTPoTS1I16+X4=",
+        "last_login": null,
+        "is_superuser": false,
+        "created_at": "2019-04-16T10:11:14.302Z",
+        "updated_at": "2019-04-16T10:11:14.302Z",
+        "username": "prabhatiitbhu1@gmail.com",
+        "email": "prabhatiitbhu1@gmail.com",
+        "is_active": true,
+        "is_staff": false,
+        "phonenumber": "",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

@@ -1,0 +1,18 @@
+media
+static
+# Executable and temporary files
+*.pyc
+*.idea/
+*.DS_*
+**.pyc
+**.idea/
+**.DS_*
+db.sqlite3
+
+*/__pycache__
+*/__pycache__/*
+venv/
+env/
+authkey.py
+
+

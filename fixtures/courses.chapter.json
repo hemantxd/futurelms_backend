@@ -1,0 +1,242 @@
+[
+{
+    "model": "courses.chapter",
+    "pk": 1,
+    "fields": {
+        "substd": 3,
+        "title": "Fluid Dynamics",
+        "description": "Fluid Dynamics",
+        "chapter_order": 1
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 2,
+    "fields": {
+        "substd": 3,
+        "title": "Units and Dimension",
+        "description": "Units and Dimension",
+        "chapter_order": 2
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 3,
+    "fields": {
+        "substd": 3,
+        "title": "Surface Tension",
+        "description": "Surface Tension",
+        "chapter_order": 3
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 4,
+    "fields": {
+        "substd": 5,
+        "title": "Chemical Bonding",
+        "description": "Chemical Bonding",
+        "chapter_order": 1
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 5,
+    "fields": {
+        "substd": 5,
+        "title": "Atomic Structure ",
+        "description": "Atomic Structure ",
+        "chapter_order": 2
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 6,
+    "fields": {
+        "substd": 5,
+        "title": "Hydrocarbons",
+        "description": "Hydrocarbons",
+        "chapter_order": 3
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 7,
+    "fields": {
+        "substd": 1,
+        "title": "Set Theory and Relation",
+        "description": "Set Theory and Relation",
+        "chapter_order": 1
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 8,
+    "fields": {
+        "substd": 1,
+        "title": "Mathematical Reasoning",
+        "description": "Mathematical Reasoning",
+        "chapter_order": 2
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 9,
+    "fields": {
+        "substd": 1,
+        "title": "Statistics",
+        "description": "Statistics",
+        "chapter_order": 3
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 10,
+    "fields": {
+        "substd": 4,
+        "title": "Electrostatics",
+        "description": "Electrostatics",
+        "chapter_order": 1
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 11,
+    "fields": {
+        "substd": 4,
+        "title": "Current Electricity",
+        "description": "Current Electricity",
+        "chapter_order": 2
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 12,
+    "fields": {
+        "substd": 4,
+        "title": "Magnetic Effect of Current and Magnetism",
+        "description": " Magnetic Effect of Current and Magnetism",
+        "chapter_order": 3
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 13,
+    "fields": {
+        "substd": 6,
+        "title": "Solid State",
+        "description": "Solid State",
+        "chapter_order": 1
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 14,
+    "fields": {
+        "substd": 6,
+        "title": "Isolation of Elements",
+        "description": "Isolation of Elements",
+        "chapter_order": 2
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 15,
+    "fields": {
+        "substd": 6,
+        "title": "Haloalkanes and Haloarenes",
+        "description": "Haloalkanes and Haloarenes",
+        "chapter_order": 3
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 16,
+    "fields": {
+        "substd": 7,
+        "title": "The Living World",
+        "description": "The Living World",
+        "chapter_order": 1
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 17,
+    "fields": {
+        "substd": 7,
+        "title": "Biological Classification",
+        "description": "Biological Classification",
+        "chapter_order": 2
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 18,
+    "fields": {
+        "substd": 7,
+        "title": "Plant Kingdom",
+        "description": "Plant Kingdom",
+        "chapter_order": 3
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 19,
+    "fields": {
+        "substd": 8,
+        "title": "Reproduction",
+        "description": "Reproduction",
+        "chapter_order": 1
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 20,
+    "fields": {
+        "substd": 8,
+        "title": "Genetics and Evolution",
+        "description": "Genetics and Evolution",
+        "chapter_order": 2
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 21,
+    "fields": {
+        "substd": 8,
+        "title": "Biology and Human Welfare",
+        "description": "Biology and Human Welfare",
+        "chapter_order": 3
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 22,
+    "fields": {
+        "substd": 2,
+        "title": "Algebra",
+        "description": "Algebra",
+        "chapter_order": 1
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 23,
+    "fields": {
+        "substd": 2,
+        "title": "Calculus",
+        "description": "Calculus",
+        "chapter_order": 2
+    }
+},
+{
+    "model": "courses.chapter",
+    "pk": 24,
+    "fields": {
+        "substd": 2,
+        "title": "Vectors and 3D Geometry",
+        "description": "Vectors and 3D Geometry",
+        "chapter_order": 3
+    }
+}
+]

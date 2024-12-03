@@ -1,0 +1,27 @@
+from django.contrib import admin
+
+from . import models
+
+admin.site.register(models.Exam)
+admin.site.register(models.ExamDomain)
+admin.site.register(models.ExamCategory)
+admin.site.register(models.ExamLevel)
+admin.site.register(models.Subject)
+admin.site.register(models.Chapter)
+admin.site.register(models.Topic)
+admin.site.register(models.PathNodes)
+admin.site.register(models.JourneyNode)
+admin.site.register(models.LearnerExams)
+admin.site.register(models.ExamAverageTimePerQuestion)
+admin.site.register(models.QuestionType)
+admin.site.register(models.DomainAnnouncement)
+admin.site.register(models.ExamSuggestedBooks)
+admin.site.register(models.ExamPreviousYearsPapers)
+admin.site.register(models.MentorExams)
+admin.site.register(models.ExamStudentNotification)
+admin.site.register(models.SelfAssessQuestion)
+admin.site.register(models.SelfAssessMcqOptions)
+admin.site.register(models.BloomLevel)
+admin.site.register(models.ChapterHints)
+admin.site.register(models.ChapterHintConcepts)
+admin.site.register(models.ChapterVideo)

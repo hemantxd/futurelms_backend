@@ -1,0 +1,23 @@
+[
+{
+    "model": "quiz.questiontag",
+    "pk": 1,
+    "fields": {
+        "text": "logical"
+    }
+},
+{
+    "model": "quiz.questiontag",
+    "pk": 2,
+    "fields": {
+        "text": "aptitude"
+    }
+},
+{
+    "model": "quiz.questiontag",
+    "pk": 3,
+    "fields": {
+        "text": "mathematical"
+    }
+}
+]

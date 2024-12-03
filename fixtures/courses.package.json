@@ -1,0 +1,86 @@
+[
+{
+    "model": "courses.package",
+    "pk": 1,
+    "fields": {
+        "course": 1,
+        "is_active": true,
+        "title": "JEE MAINS",
+        "free": false,
+        "price": "100.00",
+        "code": "mains",
+        "image": "package-images/1/2ace0304-ee35-4a72-b6d8-2ac891ab22e2.jpg",
+        "substd": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "courses.package",
+    "pk": 2,
+    "fields": {
+        "course": 1,
+        "is_active": true,
+        "title": "JEE ADVANCED",
+        "free": false,
+        "price": "200.00",
+        "code": "advanced",
+        "image": "package-images/2/fc75967b-c211-4e2e-86cb-aa8dd93aed9a.jpg",
+        "substd": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "courses.package",
+    "pk": 3,
+    "fields": {
+        "course": 2,
+        "is_active": true,
+        "title": "AIPMT",
+        "free": false,
+        "price": "100.00",
+        "code": "aipmt",
+        "image": "package-images/3/6906ec5d-aadc-4970-b39f-6c6b004e679d.jpg",
+        "substd": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
+    }
+},
+{
+    "model": "courses.package",
+    "pk": 4,
+    "fields": {
+        "course": 2,
+        "is_active": true,
+        "title": "AIIMS",
+        "free": false,
+        "price": "100.00",
+        "code": "aiims",
+        "image": "package-images/4/13cd5ca4-e9b9-4e2f-a614-9ddeef918bbd.jpg",
+        "substd": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
+    }
+}
+]

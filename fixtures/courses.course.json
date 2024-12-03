@@ -1,0 +1,22 @@
+[
+{
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+        "is_active": true,
+        "title": "JEE",
+        "description": "Jee course",
+        "image": "course-images/None/a7968182-8b39-445a-9581-c534c12c11e1.png"
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+        "is_active": true,
+        "title": "MEDICAL",
+        "description": "medical course",
+        "image": "course-images/None/4bdfd6e2-3e6f-400a-9f01-bd8f412bc0fc.png"
+    }
+}
+]
